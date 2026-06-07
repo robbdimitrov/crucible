@@ -1,0 +1,32 @@
+node_modules
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Runtime-generated ideas — keep the folders, ignore everything you create
+# so personal ideas never end up committed by accident.
+ideas/prospects/*
+ideas/validated/*
+ideas/specs/*
+!ideas/prospects/.gitkeep
+!ideas/validated/.gitkeep
+!ideas/specs/.gitkeep

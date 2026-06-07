@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "@tailwindcss/typography";
+
+:root {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    @apply m-0 p-0 text-base-content min-h-screen bg-fixed antialiased;
+    /* Deep modern mesh gradient background for dark mode */
+    background-color: #0f172a;
+    background-image: 
+        radial-gradient(at 40% 20%, hsla(250, 100%, 74%, 0.15) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, hsla(340, 100%, 76%, 0.15) 0px, transparent 50%),
+        radial-gradient(at 80% 50%, hsla(22, 100%, 77%, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(240, 100%, 70%, 0.15) 0px, transparent 50%),
+        radial-gradient(at 80% 100%, hsla(240, 100%, 70%, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 0%, hsla(340, 100%, 76%, 0.15) 0px, transparent 50%);
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #f8fafc;
+        background-image: 
+            radial-gradient(at 40% 20%, hsla(250, 100%, 74%, 0.3) 0px, transparent 50%),
+            radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.3) 0px, transparent 50%),
+            radial-gradient(at 0% 50%, hsla(340, 100%, 76%, 0.3) 0px, transparent 50%),
+            radial-gradient(at 80% 50%, hsla(22, 100%, 77%, 0.3) 0px, transparent 50%),
+            radial-gradient(at 0% 100%, hsla(240, 100%, 70%, 0.3) 0px, transparent 50%),
+            radial-gradient(at 80% 100%, hsla(240, 100%, 70%, 0.3) 0px, transparent 50%),
+            radial-gradient(at 0% 0%, hsla(340, 100%, 76%, 0.3) 0px, transparent 50%);
+    }
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+    @apply bg-base-100/50 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgb(0,0,0,0.08)];
+}
+@media (prefers-color-scheme: dark) {
+    .glass-panel {
+        @apply bg-base-300/40 border-white/5 shadow-[0_8px_32px_rgb(0,0,0,0.3)];
+    }
+}
+
+.glass-panel-heavy {
+    @apply bg-base-100/80 backdrop-blur-2xl border border-white/20 shadow-[0_16px_40px_rgb(0,0,0,0.12)];
+}
+@media (prefers-color-scheme: dark) {
+    .glass-panel-heavy {
+        @apply bg-base-300/70 border-white/10 shadow-[0_16px_40px_rgb(0,0,0,0.4)];
+    }
+}
+
+.glass-card {
+    @apply bg-base-100/60 backdrop-blur-lg border border-white/30 shadow-sm transition-all duration-300 hover:shadow-[0_8px_24px_rgb(0,0,0,0.08)] hover:-translate-y-1.5;
+}
+@media (prefers-color-scheme: dark) {
+    .glass-card {
+        @apply bg-base-200/50 border-white/10 hover:shadow-[0_8px_24px_rgb(0,0,0,0.3)];
+    }
+}
+
+.glass-input {
+    @apply bg-base-100/50 backdrop-blur-md border border-white/20 focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-inner;
+}
+@media (prefers-color-scheme: dark) {
+    .glass-input {
+        @apply bg-base-300/50 border-white/10;
+    }
+}
+
+/* Modal overlay to center items */
+.modal-overlay {
+    @apply fixed inset-0 bg-base-300/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 transition-all duration-300 opacity-100;
+}
+
+/* Typography Overrides */
+.markdown-body h1 { @apply text-4xl font-extrabold mb-5 mt-8 tracking-tight text-base-content; }
+.markdown-body h2 { @apply text-2xl font-bold mb-4 mt-6 tracking-tight text-base-content; }
+.markdown-body h3 { @apply text-xl font-semibold mb-3 mt-5 text-base-content; }
+.markdown-body p { @apply mb-5 leading-relaxed text-base-content/90; }
+.markdown-body ul, .markdown-body ol { @apply ml-6 mb-5 text-base-content/90; }
+.markdown-body ul { @apply list-disc marker:text-primary/70; }
+.markdown-body ol { @apply list-decimal marker:text-primary/70; }
+.markdown-body li { @apply mb-2; }
+.markdown-body strong { @apply font-bold text-base-content; }
