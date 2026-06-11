@@ -29,7 +29,11 @@ export const load: PageServerLoad = () => {
             const filePath = path.join(dirPath, file);
             const content = fs.readFileSync(filePath, 'utf-8');
             const stats = fs.statSync(filePath);
-            const timestamp = extractTimestamp(file, stats.birthtimeMs || stats.mtimeMs);
+            // Newest on top: float a doc by whichever is more recent — the timestamp
+            // baked into its filename, or its last write time. A freshly generated
+            // prospect or a just-validated memo (newly written into this stage) then
+            // always rises to the top, while untouched files keep their precise order.
+            const timestamp = Math.max(extractTimestamp(file, stats.mtimeMs), stats.mtimeMs);
 
             let specContent = null;
             if (stage === 'validated') {

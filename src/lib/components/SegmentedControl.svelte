@@ -24,7 +24,7 @@
     {#each options as option (option.id)}
         <button 
             type="button"
-            class="flex-1 px-3 py-1.5 text-sm font-semibold rounded-lg transition-all {selected === option.id ? 'bg-base-100 shadow-sm text-base-content' : 'text-base-content/60 hover:text-base-content'}"
+            class="flex-1 whitespace-nowrap px-3 py-1.5 text-sm font-semibold rounded-lg transition-all {selected === option.id ? 'bg-base-100 shadow-sm text-base-content' : 'text-base-content/60 hover:text-base-content'}"
             onclick={() => select(option.id)}
         >
             {option.label}

@@ -180,14 +180,13 @@
     <main class="pt-28 pb-6 px-4 sm:px-6 max-w-7xl mx-auto w-full flex-1 flex gap-6 overflow-hidden h-full">
         
         <!-- LEFT SIDEBAR: THE INDEX -->
-        <Sidebar 
-            bind:activeTab 
-            bind:isDigModalOpen 
-            bind:selectedIdea 
-            {inboxIdeas} 
-            {vaultIdeas} 
-            {displayIdeas} 
-            {selectIdea} 
+        <Sidebar
+            bind:activeTab
+            bind:selectedIdea
+            {inboxIdeas}
+            {vaultIdeas}
+            {displayIdeas}
+            {selectIdea}
         />
 
         <!-- RIGHT CANVAS: THE CRUCIBLE -->

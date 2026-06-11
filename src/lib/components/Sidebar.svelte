@@ -1,13 +1,11 @@
 <script lang="ts">
-    import { Search, CircleCheck, Sparkles, ChevronRight } from '@lucide/svelte';
+    import { Search, CircleCheck, ChevronRight } from '@lucide/svelte';
     import { getSnippet } from '$lib/utils';
     import type { Idea } from '$lib/types';
     import SegmentedControl from './SegmentedControl.svelte';
-    import PrimaryButton from './PrimaryButton.svelte';
 
     let {
         activeTab = $bindable(),
-        isDigModalOpen = $bindable(),
         selectedIdea = $bindable(),
         inboxIdeas,
         vaultIdeas,
@@ -15,7 +13,6 @@
         selectIdea
     }: {
         activeTab: string;
-        isDigModalOpen: boolean;
         selectedIdea: Idea | null;
         inboxIdeas: Idea[];
         vaultIdeas: Idea[];
@@ -47,9 +44,9 @@
             <div class="flex-1 flex flex-col items-center justify-center text-center p-6 py-16 opacity-70">
                 <div class="w-16 h-16 rounded-full bg-base-200/60 shadow-inner flex items-center justify-center mb-4">
                     {#if activeTab === 'inbox'}
-                        <Search class="w-8 h-8 text-base-content/40" />
+                        <Search class="w-8 h-8 text-base-content opacity-40" />
                     {:else}
-                        <CircleCheck class="w-8 h-8 text-base-content/40" />
+                        <CircleCheck class="w-8 h-8 text-base-content opacity-40" />
                     {/if}
                 </div>
                 <h3 class="font-bold text-lg mb-1">{activeTab === 'inbox' ? 'No Prospects Yet' : 'Vault is Empty'}</h3>
@@ -60,11 +57,7 @@
                         Validate prospects from your inbox to move them here.
                     {/if}
                 </p>
-                {#if activeTab === 'inbox'}
-                    <PrimaryButton class="btn-sm px-5" onclick={() => isDigModalOpen = true}>
-                        <Sparkles class="w-3 h-3 mr-1" /> Dig for Ideas
-                    </PrimaryButton>
-                {:else}
+                {#if activeTab === 'vault'}
                     <button class="btn btn-outline btn-sm rounded-full px-5 border-white/10 hover:bg-base-200" onclick={() => activeTab = 'inbox'}>
                         View Prospects
                     </button>
