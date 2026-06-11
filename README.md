@@ -4,8 +4,7 @@
 
 Generation is the on-ramp. Judgment is the point. Most "AI idea generators" spray plausible-sounding ideas at you; Crucible is built to *destroy* the weak ones with an evidence-backed VC memo, and only let the strong ones through.
 
-<!-- DEMO: drag the recorded .mp4 into this README in GitHub's web editor —
-GitHub uploads it to its CDN and embeds an inline player automatically. -->
+[![Video Title](https://img.youtube.com/vi/3fKLLHzBjXo/maxresdefault.jpg)](https://www.youtube.com/watch?v=3fKLLHzBjXo)
 
 ## How it works
 
