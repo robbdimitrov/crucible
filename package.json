@@ -2,6 +2,18 @@
 	"name": "crucible",
 	"private": true,
 	"version": "0.0.1",
+	"description": "An opinionated idea crucible — stress-test raw business ideas like a hostile investment committee: generate, validate (pursue/reshape/kill), and spec.",
+	"license": "MIT",
+	"author": "Robert Dimitrov",
+	"keywords": [
+		"ideas",
+		"startup",
+		"validation",
+		"vc",
+		"ai",
+		"gemini",
+		"sveltekit"
+	],
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
@@ -36,7 +48,6 @@
 		"@tailwindcss/vite": "^4.3.0",
 		"daisyui": "^5.5.23",
 		"dompurify": "^3.4.8",
-		"dotenv": "^17.4.2",
 		"marked": "^18.0.5",
 		"tailwindcss": "^4.3.0"
 	}

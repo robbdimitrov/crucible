@@ -164,10 +164,10 @@
 
     
     const hints = [
-        "Scheduling software for auto repair shops",
-        "Inventory tracking for craft breweries",
-        "Billing automation for freelance designers",
-        "Compliance tooling for food trucks"
+        "Booking + waivers for escape rooms",
+        "Royalty splits for indie musicians",
+        "Inventory for board game cafés",
+        "Dispatch for mobile car detailers"
     ];
 </script>
 
@@ -415,7 +415,7 @@
                     <textarea 
                         name="niche" 
                         class="textarea textarea-bordered w-full h-32 bg-base-100/50 backdrop-blur-md rounded-2xl text-base p-5 border-white/10 focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all resize-none shadow-inner" 
-                        placeholder="E.g., scheduling software for dog groomers..."
+                        placeholder="E.g., membership software for climbing gyms..."
                         bind:value={nicheInput}
                         required
                     ></textarea>
