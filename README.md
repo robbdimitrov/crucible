@@ -4,9 +4,11 @@
 
 Generation is the on-ramp. Judgment is the point. Most "AI idea generators" spray plausible-sounding ideas at you; Crucible is built to *destroy* the weak ones with an evidence-backed VC memo, and only let the strong ones through.
 
-[![Video Title](https://img.youtube.com/vi/3fKLLHzBjXo/maxresdefault.jpg)](https://www.youtube.com/watch?v=3fKLLHzBjXo)
+![Crucible Dashboard](assets/hero.png)
 
 ## How it works
+
+[![Crucible Demo](https://img.youtube.com/vi/3fKLLHzBjXo/maxresdefault.jpg)](https://www.youtube.com/watch?v=3fKLLHzBjXo)
 
 Ideas move through three stages, each driven by an editable AI framework in [`frameworks/`](frameworks):
 
@@ -19,7 +21,7 @@ Ideas are plain markdown files under `ideas/` (`prospects/`, `validated/`, `spec
 ## Quick start
 
 ```bash
-git clone <your-fork-url> crucible
+git clone https://github.com/robbdimitrov/crucible.git
 cd crucible
 npm install
 cp .env.example .env   # add your GEMINI_API_KEY
@@ -30,7 +32,7 @@ Get a Gemini API key at [aistudio.google.com/apikey](https://aistudio.google.com
 
 ## The frameworks are the product
 
-The web app is a comfortable shell. The real value is in [`frameworks/`](frameworks) — three carefully tuned prompts that encode a strict, moat-aware, evidence-disciplined way of evaluating businesses. Fork them, sharpen them for your domain, and the whole pipeline changes behavior. PRs that improve them are very welcome.
+The web app is a comfortable shell. The real value is in [`frameworks/`](frameworks) — three carefully tuned prompts that encode a strict, moat-aware, evidence-disciplined way of evaluating businesses. Tweak them, sharpen them for your domain, and the whole pipeline changes behavior. PRs that improve them are very welcome.
 
 ## Bring your own model
 
